@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Online Learning Portal</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="index.html" id="logoutButton">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="dashboard-container">
+      <h2>Welcome, <span id="userName">User</span>!</h2>
+      <p>Here's a summary of your activity:</p>
+      <div class="dashboard-summary">
+        <div class="card">
+          <h3>Enrolled Courses</h3>
+          <p id="enrolledCourses">5</p>
+        </div>
+        <div class="card">
+          <h3>Completed Courses</h3>
+          <p id="completedCourses">2</p>
+        </div>
+        <div class="card">
+          <h3>Upcoming Deadlines</h3>
+          <p id="upcomingDeadlines">3</p>
+        </div>
+      </div>
+      <div class="dashboard-actions">
+        <a href="course.html" class="btn">View All Courses</a>
+        <a href="profile.html" class="btn">View Profile</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Online Learning Portal. All rights reserved.</p>
+  </footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>

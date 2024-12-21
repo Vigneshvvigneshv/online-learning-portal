@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css">
+  <script src="profile.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Online Learning Portal</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-container">
+      <h2>User Profile</h2>
+
+      <!-- Profile Info Section (default view) -->
+      <div id="profile-info" class="profile-card">
+        <div class="profile-info">
+          <h3>Personal Information</h3>
+          <p><strong>Name:</strong> <span id="display-name">vignesh V</span></p>
+          <p><strong>Email:</strong> <span id="display-email">vicky.com</span></p>
+          <p><strong>Phone:</strong> <span id="display-phone">+12348966459</span></p>
+          <p><strong>Joined on:</strong> January 22, 2004</p>
+        </div>
+        
+        <div class="profile-actions">
+          <button onclick="enableEdit()" class="btn">Edit Profile</button>
+        </div>
+      </div>
+
+      <!-- Profile Edit Form (hidden by default) -->
+      <div id="profile-edit-form" class="profile-card" style="display: none;">
+        <h3>Edit Profile</h3>
+        <form onsubmit="updateProfile(event)">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required><br><br>
+          
+          <button type="submit" class="btn">Save Changes</button>
+          <button type="button" onclick="cancelEdit()" class="btn">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2024 Online Learning Portal. All rights reserved.</p>
+  </footer>
+</body>
+<script src="profile.js"></script>
+</html>
